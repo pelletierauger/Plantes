@@ -44,11 +44,12 @@ drawTree = function(sc = 0.5) {
             // let sc = 0.5;
             let x = Math.floor(b.vec1.x*sc + (109*7*0.5));
             let y = Math.floor((b.vec1.y*ratio*sc + (25*9*0.5)));
-            paintStatic(ge.t.name, x, y, brush, polka15);
+            paintStatic(ge.t.name, x, y, thickQuillForward, empty);
+            paintStatic(ge.t.name, x, y, bigQuillForward, polka15);
             // paintStatic(ge.t.name, x + 1, y, dot, empty);
             // paintStatic(ge.t.name, x, y + 1, dot, empty);
             // paintStatic(ge.t.name, x + 1, y + 1, dot, empty);
-            paintStatic(ge.t.name, x, y, dot, full);
+            paintStatic(ge.t.name, x, y, smallQuillForward, full);
         }
         currentBranch++;
     }
