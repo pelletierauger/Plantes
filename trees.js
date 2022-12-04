@@ -43,19 +43,19 @@ drawTree = function(sc = 0.5) {
             // line(b.vec1.x, b.vec1.y, b.vec2.x, b.vec2.y);
             // let sc = 0.5;
             let x = Math.floor(b.vec1.x*sc + (109*7*0.5));
-            let y = Math.floor((b.vec1.y*ratio*sc + (25*9*0.5)));
-            paintStatic(ge.t.name, x, y, thickQuillForward, empty);
-            paintStatic(ge.t.name, x, y, bigQuillForward, polka15);
-            // paintStatic(ge.t.name, x + 1, y, dot, empty);
+            let y = Math.floor((b.vec1.y*ratio*sc + (25*9*0.5)) + ge.t.scroll.y*9);
+            //paintStatic(ge.t.name, x, y, thickQuillForward, empty);
+            //paintStatic(ge.t.name, x, y, bigQuillForward, polka15);
+            paintStatic(ge.t.name, x, y, dot, full);
             // paintStatic(ge.t.name, x, y + 1, dot, empty);
             // paintStatic(ge.t.name, x + 1, y + 1, dot, empty);
-            paintStatic(ge.t.name, x, y, smallQuillForward, full);
+            //paintStatic(ge.t.name, x, y, smallQuillForward, full);
         }
         currentBranch++;
     }
 };
 
-function path(t) {
+path = function(t) {
     var x = Math.pow(Math.sin(t), 1) * 40;
     var y = Math.pow(Math.cos(t), 1) * 40;
     var v = createVector(x, y);
@@ -84,4 +84,74 @@ seed = function(v, a, h, green, branch) {
 };
 
 
-// "let s = Math.random();setupTree();ge.clearCanvas();for(let i=0;i<300;i++){setTimeout(()=>{drawTree(s);},i*10)}"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if (false) {
+
+let s = Math.random();
+setupTree();
+ge.clearCanvas();
+for (let i=0; i < 1000; i++) {
+    setTimeout(()=>{drawTree(s);},i*10);
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
